@@ -1,0 +1,53 @@
+.game-board {
+    background-image: url("/public/canvas-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.game-board-child {
+    backdrop-filter: blur(6px);
+}
+
+.left-panel {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 16px;
+    background-color: black;
+}
+
+.right-panel {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 16px;
+    background-color: black;
+}
+
+
+.bubble-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: 50%;
+    left: 45%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(173, 216, 230, 0.7);
+    border-radius: 50%;
+    animation: moveUp 2.8s linear forwards;
+}
+
+@keyframes moveUp {
+    from {
+        bottom: 50%;
+        opacity: 1;
+    }
+    to {
+        bottom: 100%;
+        opacity: 0;
+    }
+}
